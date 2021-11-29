@@ -14,13 +14,14 @@
 }
 .about-us{
     text-align: center;
-    /* background-color: brown; */
+    background-color:seashell;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     height: 160px;
     margin-top: 40px;
     margin-bottom: 40px;
+    font-family:serif;
 }
 .about-image{
     width: 50%;
@@ -270,6 +271,9 @@
       color: red;
       font-weight: 700;
   }
-.contact_us{
+#contact_us{
     text-align: center;
+    padding-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:turquoise
 }
