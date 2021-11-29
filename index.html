@@ -1,21 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel= "stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Pizza-Place</title>
-</head>
-<body>
- <h1> PIZZA PLACE</h1>
- <p> Welcome to Pizza Place Kenya! </p>>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel= "stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Pizza-Place</title>
+    </head>
+    <body>
+        <div id="navtop">
+            <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+            <a class="navbar-brand" href="">PIZZA PLACE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about-us">About Us <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#varieties">Our Varieties <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Contact Us <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <div class="navbar-text cart_preview" id="cart_preview" onclick="showCart()">View Cart: 0 Item(s)</div>
+            </div> 
+            </nav>      
+        </div> 
+        <div class="banner">
+            <h1>WELCOME TO PIZZA PLACE KENYA!</h1>
+        </div>
+        <div class= "about-us" id="about-us">
+            <h1> ABOUT US</h1>
+            <p>
+                A Pizza Inn pizza box might be one of the most recognisable icons of Africa. 
+                Whichever way you slice it, Pizza Inn is an industry leader in the quick service pizza game. 
+                The first Pizza Inn outlet opened its doors in 1994 in Harare, Zimbabwe, and rose quickly in popularity.
+                Serving hot oven-fresh pizza with its signature all-natural tomato sauce and using only the freshest ingredients
+                Pizza Inn has established itself at the top of the industry and is easily one of the first choices in quick service pizza in Africa.
+            </p>
+        </div>
+        <div class="varieties"  id="varieties">
+            <h2 class="pizza_header">SELECT FROM OUR VARIETIES</h2>
+            <div class="container">
+                <div class="row row_one">
+                    <div class="col-md-3 pizza_item" onclick="selectPizza('Cheese Pizza')">
+                        <img src="./images/Cheesepizza.gif" alt="pizzaimg1" width="95%" height="90%">
+                        <p >Cheese Pizza</p>
+                    </div>
+                    <div class="col-md-3 pizza_item" onclick="selectPizza('Greek Pizza')">
+                        <img src="./images/Greekpizza.jpeg" alt="pizzaimg2" width="100%" height="90%">
+                        <p >Greek Pizza</p>
+                    </div> 
+                    <div class="col-md-3 pizza_item" id="pizza_item" onclick="selectPizza('Baristo Pizza')">
+                        <img src="./images/Baristopizza.jpeg" alt="pizzaimg3" width="100%" height="90%">
+                        <p >Baristo Pizza</p>
+                    </div>
+                    <div class="col-md-3 pizza_item" id="pizza_item" onclick="selectPizza('Margherita Pizza')">
+                        <img src="./images/Baristopizza.jpeg" alt="pizzaimg3" width="100%" height="90%">
+                        <p >Margherita Pizza</p>
+                    </div>
+                </div>
+                <div id="pizza-modal" class="pizza-modal">
+                    <div class="pizza-modal-content">
+                        <div class="pizza-modal-header">
+                            <h5>Please select your options</h5>
+                            <span class="pizza-close">&times;</span>
+                        </div>
+                        <div class="pizza-modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="pizza_name">Pizza name</label>
+                                    <input type="text" class="form-control" id="pizza_name" readonly> 
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Select Size</label>
+                                  <select class="form-control" id="size">
+                                    <option>Small</option>
+                                    <option>Medium</option>
+                                    <option>large</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Choose your Favorite Crust</label>
+                                    <select class="form-control" id="crust">
+                                      <option>Crispy</option>
+                                      <option>Stuffed</option>
+                                      <option>GlutenFree</option>
+                                    </select>
+                                </div> 
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Select your Topping</label>
+                                    <select class="form-control" id="topping">
+                                      <option>Bacon</option>
+                                      <option>Cheese</option>
+                                      <option>Sausage</option>
+                                    </select> 
+                                </div>
+                                <button type="button" class="btn btn-warning" onclick="submitOrder()">Place Order</button>
+                              </form>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <div id="cart-modal" class="cart-modal">
+                <div class="cart-modal-content">
+                    <div class="cart-modal-header">
+                        <h5>Please select your options</h5>
+                        <span class="cart-close">&times;</span>
+                    </div>
+                    <div class="cart-modal-body" id="cart-modal-body">
+                        <div class="cart-modal-total" id="cart-modal-total">
+                            <h4>Your total is:</h4>
+                            <h4 id="cart-modal-total-amount"></h4>
+                            <button type="button" class="btn btn-success" onclick="openCheckoutModal()">Checkout</button>
+                        </div>
+                        <div class="cart_item_header">
+                            <div class="cart_item_col">Name</div>
+                            <div class="cart_item_col">Size</div>
+                            <div class="cart_item_col">Crust</div>
+                            <div class="cart_item_col">Topping</div>
+                            <div class="cart_item_col">Price</div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="checkout-modal" class="checkout-modal">
+                <div class="checkout-modal-content">
+                    <div class="checkout-modal-header">
+                        <h5>Please select your delivery option</h5>
+                        <span class="checkout-close">&times;</span>
+                    </div>
+                    <div class="checkout-modal-body" id="checkout-modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="delivery">Delivery Option</label>
+                                <select class="form-control" id="delivery" onchange="onDeliverySelect()">
+                                  <option value="dont_deliver">Do not deliver</option>
+                                  <option value="deliver">Deliver</option>
+                                </select>
+                            </div>
+                            <div class="form-group location_group" id="location_group">
+                                <label for="location">Delivery Location</label>
+                                <input type="text" class="form-control" id="location"> 
+                            </div>
+                            <br>
+                            <div class="delivery_text" id="delivery_text">You will be changed extra 150 kshs for delivery</div>
+                            <br>
+                            <button type="button" class="btn btn-success" onclick="onComplete()">Complete</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class= "container contact_us"> 
+            <h2>Contact Us</h2>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="./js/scripts.js"></script> 
-</body>
+
+        </div>
+      
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="./js/scripts.js"></script> 
+    </body>
 </html>
