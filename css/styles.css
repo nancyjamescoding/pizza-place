@@ -9,7 +9,7 @@
     height:500px;
     padding-top: 300px;
     color : white;
-    font-family: 'gabriela' ,serif;
+    font-family:cursive;
     /* background-color: brown */
 }
 .about-us{
@@ -32,6 +32,7 @@
 .pizza_header {
     text-align: center;
     margin-bottom: 40px;
+    font-family:serif;
 }
 
 .cart {
