@@ -131,7 +131,31 @@
                     </div>
                 </div>
             </div>
-            
+            <div id="checkout-modal" class="checkout-modal">
+                <div class="checkout-modal-content">
+                    <div class="checkout-modal-header">
+                        <h5>Please select your delivery option</h5>
+                        <span class="checkout-close">&times;</span>
+                    </div>
+                    <div class="checkout-modal-body" id="checkout-modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="delivery">Delivery Option</label>
+                                <select class="form-control" id="delivery" onchange="onDeliverySelect()">
+                                  <option value="dont_deliver">Do not deliver</option>
+                                  <option value="deliver">Deliver</option>
+                                </select>
+                            </div>
+                            <div class="form-group location_group" id="location_group">
+                                <label for="location">Delivery Location</label>
+                                <input type="text" class="form-control" id="location"> 
+                            </div>
+                            <br>
+                            <div class="delivery_text" id="delivery_text">You will be changed extra 150 kshs for delivery</div>
+                            <br>
+                            <button type="button" class="btn btn-success" onclick="onComplete()">Complete</button>
+                          </form>
+                    </div>
                 </div>
             </div>
         </div>
