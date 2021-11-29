@@ -22,6 +22,15 @@ const pricesPerPizzaTopping = {
     'Sausage': 500,
 }
 
+class Pizza {
+    constructor(pizzaName, topping, size, crust, price) {
+        this.pizzaName = pizzaName
+        this.topping = topping
+        this.size = size
+        this.crust = crust
+        this.price = price
+    }
+}
 
 function calculatePizzaCost(pizzaName, size, topping) {
     return  pricesPerPizzaType[pizzaName] + pricesPerPizzaSize[size] + pricesPerPizzaTopping[topping]
