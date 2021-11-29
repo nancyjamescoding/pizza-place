@@ -1,0 +1,275 @@
+
+.banner{
+    background-image:url('../images/bckpizza.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+    height:500px;
+    padding-top: 300px;
+    color : white;
+    font-family: 'gabriela' ,serif;
+    /* background-color: brown */
+}
+.about-us{
+    text-align: center;
+    /* background-color: brown; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 160px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.about-image{
+    width: 50%;
+    height: 600px;
+    
+}
+
+.pizza_header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cart {
+    float: right;
+}
+
+.row_one {
+    width: 100%;
+    height: 300px;
+}
+
+.row_two {
+    width: 100%;
+    height: 300px;
+}
+
+.pizza_item {
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.pizza-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+.pizza-modal-content {
+    position: fixed;
+    left: 25%;
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    min-width: 50%;
+    max-width: 50%; /* Could be more or less, depending on screen size */
+    height: auto;
+}
+
+.pizza-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 50px;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  .pizza-modal-body {
+      padding:20px;
+  }
+
+  /* The Close Button */
+.pizza-close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+  .pizza-close:hover,
+  .pizza-close:focus {
+    color: red !important;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.cart_preview {
+    cursor: pointer;
+    color: red !important;
+    font-weight: 700;
+}
+
+.cart_preview:hover {
+    color: white !important;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* The Modal (background) */
+.cart-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+.cart-modal-content {
+    position: fixed;
+    left: 15%;
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    min-width: 70%;
+    max-width: 70%; /* Could be more or less, depending on screen size */
+    height: auto;
+}
+
+.cart-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 50px;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  .cart-modal-body {
+      padding:20px;
+  }
+
+  /* The Close Button */
+.cart-close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+  .cart-close:hover,
+  .cart-close:focus {
+    color: red !important;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.cart_item_header {
+    background-color: yellow;
+    height: 50px;
+    width: 100%;
+    font-weight: 700;
+}
+
+.cart_item {
+    height: 50px;
+    width: 100%;
+}
+
+.cart_item_col {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    width: 19%;
+    height: 100%;
+}
+
+.cart-modal-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 50px;
+    width: 100%;
+    color: red;
+}
+
+
+/* The Modal (background) */
+.checkout-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+.checkout-modal-content {
+    position: fixed;
+    left: 15%;
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    min-width: 70%;
+    max-width: 70%; /* Could be more or less, depending on screen size */
+    height: auto;
+}
+
+.checkout-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 50px;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  .checkout-modal-body {
+      padding:20px;
+  }
+
+  /* The Close Button */
+.checkout-close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+  .checkout-close:hover,
+  .checkout-close:focus {
+    color: red !important;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .location_group {
+      display: none;
+  }
+
+  .delivery_text {
+      display: none;
+      color: red;
+      font-weight: 700;
+  }
+.contact_us{
+    text-align: center;
+}
