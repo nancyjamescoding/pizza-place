@@ -22,10 +22,13 @@ This is a web application for Pizza Place a which is a pizza selling venture, th
     * jquery
 
  ### BDD
-    * Enter your name
-    * Enter your email address
-    * Enter a message
-    * Click Submit
+    * Click pizza image to select your pizza of choice
+    * Select the crust
+    * Select the toppings
+    * Select size of the pizza
+    * Press on place order
+    * Click on the cart
+    * 
 
  ### Contact Information
      You can reach me on [nancy.ndung'u@student.moringaschool.com] 
