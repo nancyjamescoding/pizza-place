@@ -65,7 +65,34 @@
                         <p >Margherita Pizza</p>
                     </div>
                 </div>
-                
+                <div id="pizza-modal" class="pizza-modal">
+                    <div class="pizza-modal-content">
+                        <div class="pizza-modal-header">
+                            <h5>Please select your options</h5>
+                            <span class="pizza-close">&times;</span>
+                        </div>
+                        <div class="pizza-modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="pizza_name">Pizza name</label>
+                                    <input type="text" class="form-control" id="pizza_name" readonly> 
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Select Size</label>
+                                  <select class="form-control" id="size">
+                                    <option>Small</option>
+                                    <option>Medium</option>
+                                    <option>large</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Choose your Favorite Crust</label>
+                                    <select class="form-control" id="crust">
+                                      <option>Crispy</option>
+                                      <option>Stuffed</option>
+                                      <option>GlutenFree</option>
+                                    </select>
+                                </div> 
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Select your Topping</label>
                                     <select class="form-control" id="topping">
